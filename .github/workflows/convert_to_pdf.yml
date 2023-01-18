@@ -1,0 +1,16 @@
+name: Convert to pdf
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --standalone
+            --output=index.pdf
+            src/demo.md
