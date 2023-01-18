@@ -17,7 +17,12 @@ jobs:
         run: apk add build-base linux-headers python3-dev
 
       - name: Install filters
-        run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos --user
+        run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos
+
+      - name: Test filter install
+        run: |
+          which pandoc-secnos
+          which pandoc-xnos
 
       - name: Convert with pandoc
         run: pandoc --standalone --number-sections --filter pandoc-xnos --output=demo.pdf src/demo.md
