@@ -2,6 +2,12 @@
 title: Document Title
 ---
 
-# Section
+# Section {#sec:mysec}
 
 My Paragraph.
+
+\newpage
+
+# New Section
+
+My Reference @sec:mysec.
