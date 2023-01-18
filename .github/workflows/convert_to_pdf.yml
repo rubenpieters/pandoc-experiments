@@ -6,11 +6,19 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
 
-      - uses: docker://pandoc/core:2.9
+      - name: Convert with pandoc
+        uses: docker://pandoc/latex:2.9
         with:
           args: >-
             --standalone
-            --output=index.pdf
+            --output=demo.pdf
             src/demo.md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: uploaded_demo.pdf
+          path: demo.pdf
