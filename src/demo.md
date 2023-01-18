@@ -11,3 +11,7 @@ My Paragraph.
 # New Section
 
 My Reference @sec:mysec.
+
+# Changes
+
+I made some changes via the editor.
