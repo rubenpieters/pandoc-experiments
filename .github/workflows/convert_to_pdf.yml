@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install pip
-        run: apt install python3-pip
+        run: apk add py3-pip
 
       - name: Install filters
         run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos --user
