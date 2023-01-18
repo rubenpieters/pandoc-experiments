@@ -5,19 +5,19 @@ on: push
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-20.04
+    container: pandoc/latex:2.9
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Install pip
+        run: sudo apt install python3-pip
+
+      - name: Install filters
+        run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos --user
+
       - name: Convert with pandoc
-        uses: docker://pandoc/latex:2.9
-        with:
-          args: >-
-            --standalone
-            --number-sections
-            --filter pandoc-xnos
-            --output=demo.pdf
-            src/demo.md
+        run: pandoc --standalone --number-sections --filter pandoc-xnos --output=demo.pdf src/demo.md
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
