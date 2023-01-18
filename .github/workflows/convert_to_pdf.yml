@@ -13,8 +13,10 @@ jobs:
       - name: Install pip
         run: apk add py3-pip
 
-      - name: Install gcc
-        run: apk add build-base
+      - name: Install filter dependencies
+        run: | 
+          apk add build-base
+          apk add python3-dev
 
       - name: Install filters
         run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos --user
