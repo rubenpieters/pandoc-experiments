@@ -10,6 +10,8 @@ title: Document Title
 
 ## General
 
+My changes
+
 *These rules are compatible with cards from the game ANDROID: NETRUNNER by Fantasy Flight Games. ANDROID: NETRUNNER is a game about the cyber-struggle between massive Corporations and subversive hackers known as Runners.*
 
 ##### The game is played between two players. One player takes the role of the Corp (Corporation) and the other takes the role of the Runner. This rules document will frequently refer to a player interchangeably with their game role.
