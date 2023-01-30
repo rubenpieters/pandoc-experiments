@@ -5,7 +5,7 @@ on: push
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-20.04
-    container: pandoc/latex:2.9
+    container: pandoc/latex:2.19.2
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -19,10 +19,8 @@ jobs:
       - name: Install filters
         run: pip3 install pandoc-fignos pandoc-eqnos pandoc-tablenos pandoc-secnos
 
-      - name: Test filter install
-        run: |
-          which pandoc-secnos
-          which pandoc-xnos
+      - name: Install latex packages
+        run: tlmgr install titlesec
 
       - name: Convert with pandoc
         run: pandoc --standalone --number-sections --filter pandoc-xnos --output=demo.pdf src/demo.md
