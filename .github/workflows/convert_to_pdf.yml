@@ -25,7 +25,7 @@ jobs:
       - name: Convert to pdf
         run: pandoc --standalone --number-sections --filter pandoc-xnos --output=demo.pdf src/demo.md
 
-      - name: Convert to pdf
+      - name: Convert to html
         run: pandoc --number-sections --filter pandoc-xnos --output=demo.html src/demo.md
 
       - name: Upload artifact
