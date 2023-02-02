@@ -22,11 +22,16 @@ jobs:
       - name: Install latex packages
         run: tlmgr install titlesec
 
-      - name: Convert with pandoc
+      - name: Convert to pdf
         run: pandoc --standalone --number-sections --filter pandoc-xnos --output=demo.pdf src/demo.md
+
+      - name: Convert to pdf
+        run: pandoc --number-sections --filter pandoc-xnos --output=demo.html src/demo.md
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: artifacts
-          path: demo.pdf
+          path: |
+            demo.pdf
+            demo.html

@@ -18,7 +18,7 @@ header-includes: |
 
 *These rules are compatible with cards from the game ANDROID: NETRUNNER by Fantasy Flight Games. ANDROID: NETRUNNER is a game about the cyber-struggle between massive Corporations and subversive hackers known as Runners.*
 
-### The game is played between two players. One player takes the role of the Corp (Corporation) and the other takes the role of the Runner. This rules document will frequently refer to a player interchangeably with their game role.
+### The game is played between two players. One player takes the role of the Corp (Corporation) and the other takes the role of the Runner. This rules document will frequently refer to a player interchangeably with their game role. {#sec:rule_players}
 
 ### Each player needs a legal deck, an identity card for their role, and any extra cards used from outside their deck. They also need a supply of tokens as described in section @sec:sec_counters_and_tokens. The constraints that define the legality of a deck are defined in section @sec:sec_deck_construction, and the cases where cards outside the deck and identity can be used are defined in section @sec:sec_extra_cards.
 
